@@ -1,0 +1,64 @@
+
+=== DATA PREVIEW ===
+  Order_ID  Order_Date Region Category  ... Unit_Price  Revenue     Cost   Profit
+0  ORD1001  2025-01-01   West  Fashion  ...    2436.67  7310.01  5396.90  1913.11
+1  ORD1002  2025-01-03   East    Books  ...     651.49  2605.96  1523.42  1082.54
+2  ORD1003  2025-01-05  South     Home  ...     564.01  1128.02   816.51   311.51
+3  ORD1004  2025-01-07   West     Home  ...    1219.65  3658.95  2075.47  1583.48
+4  ORD1005  2025-01-09   West    Books  ...     484.84  1939.36  1252.29   687.07
+
+[5 rows x 10 columns]
+
+Rows and columns: (180, 10)
+
+Missing values before cleaning:
+ Order_ID      0
+Order_Date    0
+Region        1
+Category      0
+Product       1
+Quantity      0
+Unit_Price    0
+Revenue       0
+Cost          0
+Profit        0
+dtype: int64
+Duplicate order IDs before cleaning: 1
+
+Rows after cleaning: 179
+
+=== BUSINESS KPIs ===
+Total revenue: ₹578,022.35
+Total profit: ₹175,802.04
+Unique orders: 179
+Average revenue per order: ₹3,229.18
+Profit margin: 30.41%
+
+=== CATEGORY PERFORMANCE ===
+    Category   Revenue   Profit  Quantity
+    Fashion 218739.62 61775.04       139
+Electronics 189093.83 61112.46       195
+       Home 111307.69 34099.05       141
+      Books  58881.21 18815.49       101
+
+=== REGIONAL PERFORMANCE ===
+  Region   Revenue   Profit
+   West 152707.36 46283.59
+   East 147380.63 45127.03
+  South 140764.04 42778.07
+  North 131225.12 39242.15
+Unknown   5945.20  2371.20
+
+Saved charts and summary tables in the 'outputs' folder.
+Open outputs/business_insights.md for the automatically generated insights.
+
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
